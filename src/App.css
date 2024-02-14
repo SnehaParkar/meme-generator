@@ -1,38 +1,180 @@
+:root {
+  --ff-main: "Inter", Arial, sans-serif;
+  --ff-size: 16px;
+  --clr-accent: rgb(139, 71, 222);
+  --clr-text-main: #ffffff;
+  --clr-text-light: #b5b2be;
+
+  --clr-background: rgb(70, 63, 251);
+  --clr-gradient-background: radial-gradient(circle, rgba(70, 63, 251, 1) 0%, rgba(233, 70, 252, 1) 100%);
+}
+
+/* ---------------------- */
+/* Reset                  */
+/* ---------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-main);
+  font-size: var(--ff-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--clr-text-main);
+  background-color: #f6f6f6;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  height: 60px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--clr-background);
+  background: var(--clr-gradient-background);
+  color: var(--clr-text-main);
+  padding: 0 30px;
+  box-shadow: 0px 3px 10px rgba(70, 63, 251, 0.6);
+}
+
+.header-with-image {
+  display: flex;
+
+}
+
+.header-image {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.header-title {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  font-weight: 600;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background: var(--clr-background);
+  background: var(--clr-gradient-background);
+  border-top: 1px solid var(--clr-background);
+  font-weight: 400;
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+  font-size: 0.9em;
+}
+
+.footer-link {
+  color: var(--clr-text-main);
+  text-decoration: dotted;
+  cursor: pointer;
+}
+
+.page-section {
+  margin: 30px auto 50px;
+  padding: 20px;
+  width: 650px;
+  min-height: 300px;
+  border-radius: 7px;
+  border: 3px solid #ccc;
+  background-color: #fff;
+}
+
+.form-section {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 0 15px 0;
+}
+
+.form-component {
+  padding: 15px;
+}
+
+.form-section .input-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+  color: var(--clr-background);
+  font-weight: 600;
+}
+
+.form-section .input-form {
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 7px;
+  width: 260px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button-form {
+  margin: 0px 0 20px;
+  background: var(--clr-background);
+  color: var(--clr-text-main);
+  width: 320px;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.meme-section {
+  border-top: 2px solid #ccc;
+  position: relative;
+  padding: 50px 0 0;
+}
+
+.meme-image {
+  max-width: 100%;
+  align-self: center;
+  border-radius: 3px;
+}
+
+.meme--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0.5em 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2.3em;
+  text-transform: uppercase;
   color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
 }
 
-.App-link {
-  color: #61dafb;
+.bottom {
+  bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top {
+  top: 50px;
 }
